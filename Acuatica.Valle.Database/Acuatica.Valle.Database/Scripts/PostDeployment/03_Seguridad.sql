@@ -3,6 +3,9 @@
 
   Idempotente y respetuoso con lo que se configure desde el sistema:
   - Roles, módulos y permisos: solo se insertan los que faltan.
+  - SUPERUSUARIO (desarrolladores) no necesita renglones en RolPermiso: el API le da acceso a
+    todo y no se puede asignar ni quitar desde la UI salvo por otro superusuario. Su usuario
+    (root) se crea con Scripts\Manual\01_UsuarioRoot.sql, nunca en el despliegue.
   - Permisos por rol: el rol ADMIN siempre recibe todos los permisos. Para los demás roles,
     la asignación base se aplica solo cuando el rol o el permiso se crean por primera vez;
     si después se le quita un permiso a RECEPCION, un nuevo despliegue no lo vuelve a poner.
@@ -15,6 +18,7 @@ DECLARE @PermisosNuevos TABLE ([PermisoId] SMALLINT PRIMARY KEY);
 ------------------------------------------------------------------ Roles
 MERGE [Seguridad].[Rol] AS t
 USING (VALUES
+    ('SUPERUSUARIO', N'Superusuario', N'Desarrolladores del sistema. Acceso total sin restricciones; el API no le valida permisos.'),
     ('ADMIN',     N'Administrador', N'Acceso total al sistema.'),
     ('RECEPCION', N'Recepción',     N'Alumnos, horarios, asistencia, cobro y calendario.'),
     ('PROFESOR',  N'Profesor',      N'Su calendario, la lista de sus alumnos y pasar asistencia.')

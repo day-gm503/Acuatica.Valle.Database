@@ -28,7 +28,7 @@ GO
 EXECUTE sp_addextendedproperty @name = N'MS_Description', @value = N'Llave primaria.',
     @level0type = N'SCHEMA', @level0name = N'Seguridad', @level1type = N'TABLE', @level1name = N'Rol', @level2type = N'COLUMN', @level2name = N'RolId';
 GO
-EXECUTE sp_addextendedproperty @name = N'MS_Description', @value = N'ADMIN, RECEPCION, PROFESOR…',
+EXECUTE sp_addextendedproperty @name = N'MS_Description', @value = N'SUPERUSUARIO, ADMIN, RECEPCION, PROFESOR…',
     @level0type = N'SCHEMA', @level0name = N'Seguridad', @level1type = N'TABLE', @level1name = N'Rol', @level2type = N'COLUMN', @level2name = N'Clave';
 GO
 EXECUTE sp_addextendedproperty @name = N'MS_Description', @value = N'1 = no se puede borrar ni renombrar desde la UI.',

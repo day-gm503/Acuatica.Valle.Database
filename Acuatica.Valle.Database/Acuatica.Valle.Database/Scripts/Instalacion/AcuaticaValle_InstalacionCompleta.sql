@@ -2421,6 +2421,7 @@ DECLARE @PermisosNuevos TABLE ([PermisoId] SMALLINT PRIMARY KEY);
 ------------------------------------------------------------------ Roles
 MERGE [Seguridad].[Rol] AS t
 USING (VALUES
+    ('SUPERUSUARIO', N'Superusuario', N'Desarrolladores del sistema. Acceso total sin restricciones; el API no le valida permisos.'),
     ('ADMIN',     N'Administrador', N'Acceso total al sistema.'),
     ('RECEPCION', N'Recepción',     N'Alumnos, horarios, asistencia, cobro y calendario.'),
     ('PROFESOR',  N'Profesor',      N'Su calendario, la lista de sus alumnos y pasar asistencia.')

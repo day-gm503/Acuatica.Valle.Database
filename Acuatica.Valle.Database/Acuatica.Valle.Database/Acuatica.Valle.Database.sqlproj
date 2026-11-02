@@ -78,6 +78,7 @@
     <Folder Include="Reporte\Tables\" />
     <Folder Include="Scripts\" />
     <Folder Include="Scripts\Instalacion\" />
+    <Folder Include="Scripts\Manual\" />
     <Folder Include="Scripts\PostDeployment\" />
     <Folder Include="Security\" />
     <Folder Include="Seguridad\" />
@@ -148,6 +149,7 @@
     <None Include="Scripts\PostDeployment\03_Seguridad.sql" />
     <None Include="Scripts\PostDeployment\04_Calendario.sql" />
     <None Include="Scripts\Instalacion\AcuaticaValle_InstalacionCompleta.sql" />
+    <None Include="Scripts\Manual\01_UsuarioRoot.sql" />
     <None Include="Acuatica.Valle.Database.publish.xml" />
   </ItemGroup>
 </Project>
