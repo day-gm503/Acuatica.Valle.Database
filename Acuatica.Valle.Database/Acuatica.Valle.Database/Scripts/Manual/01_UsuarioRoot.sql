@@ -20,6 +20,12 @@
              Este script NO forma parte del post-deployment a propósito: una contraseña
              conocida no debe llegar sola a producción.
 ============================================================================================*/
+-- sqlcmd (sin -I) y algunas herramientas abren la conexión con QUOTED_IDENTIFIER OFF; las tablas
+-- con índices filtrados lo exigen en ON.
+SET ANSI_NULLS ON;
+SET QUOTED_IDENTIFIER ON;
+GO
+
 SET NOCOUNT ON;
 SET XACT_ABORT ON;
 
