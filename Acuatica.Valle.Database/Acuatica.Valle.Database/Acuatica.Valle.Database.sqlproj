@@ -83,6 +83,7 @@
     <Folder Include="Security\" />
     <Folder Include="Seguridad\" />
     <Folder Include="Seguridad\Tables\" />
+    <Folder Include="Seguridad\StoredProcedures\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Security\Seguridad.sql" />
@@ -105,6 +106,26 @@
     <Build Include="Seguridad\Tables\RolPermiso.sql" />
     <Build Include="Seguridad\Tables\SesionUsuario.sql" />
     <Build Include="Seguridad\Tables\Bitacora.sql" />
+    <Build Include="Seguridad\StoredProcedures\AVCmdActualizarUsuario.sql" />
+    <Build Include="Seguridad\StoredProcedures\AVCmdCambiarEstadoUsuario.sql" />
+    <Build Include="Seguridad\StoredProcedures\AVCmdCambiarPassword.sql" />
+    <Build Include="Seguridad\StoredProcedures\AVCmdCerrarSesion.sql" />
+    <Build Include="Seguridad\StoredProcedures\AVCmdCerrarSesionesUsuario.sql" />
+    <Build Include="Seguridad\StoredProcedures\AVCmdCrearUsuario.sql" />
+    <Build Include="Seguridad\StoredProcedures\AVCmdDesbloquearUsuario.sql" />
+    <Build Include="Seguridad\StoredProcedures\AVCmdIniciarSesion.sql" />
+    <Build Include="Seguridad\StoredProcedures\AVCmdRegistrarBitacora.sql" />
+    <Build Include="Seguridad\StoredProcedures\AVCmdRegistrarLoginFallido.sql" />
+    <Build Include="Seguridad\StoredProcedures\AVCmdRenovarSesion.sql" />
+    <Build Include="Seguridad\StoredProcedures\AVQryCredencialUsuario.sql" />
+    <Build Include="Seguridad\StoredProcedures\AVQryDetalleUsuario.sql" />
+    <Build Include="Seguridad\StoredProcedures\AVQryListadoBitacora.sql" />
+    <Build Include="Seguridad\StoredProcedures\AVQryListadoRoles.sql" />
+    <Build Include="Seguridad\StoredProcedures\AVQryListadoUsuarios.sql" />
+    <Build Include="Seguridad\StoredProcedures\AVQryPerfilUsuario.sql" />
+    <Build Include="Seguridad\StoredProcedures\AVQryResumenUsuarios.sql" />
+    <Build Include="Seguridad\StoredProcedures\AVQrySesionesUsuario.sql" />
+    <Build Include="Seguridad\StoredProcedures\AVQryValidarSesion.sql" />
     <Build Include="Catalogo\Tables\TipoPeriodoPago.sql" />
     <Build Include="Catalogo\Tables\MetodoPago.sql" />
     <Build Include="Catalogo\Tables\ConceptoCobro.sql" />
